@@ -68,7 +68,17 @@ h2 {
 		height: auto;
 	}
 }
-.banner {
-	width: 100%;
-	background-color: blue;
+.each-slide > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: cover;
+	height: 550px;
+}
+
+.each-slide span {
+	padding: 20px;
+	font-size: 20px;
+	background: #fff;
+	text-align: center;
 }

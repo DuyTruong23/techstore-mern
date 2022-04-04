@@ -1,38 +1,29 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Carousel, Image } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
-import Loader from './Loader';
-import Message from './Message';
-import { listTopProducts } from '../actions/productActions';
+import React from 'react';
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
+import '../index.css';
+
+const slideImages = [
+	'images/slide1.jpg',
+	'images/slide2.jpg',
+	'images/slide3.jpg',
+];
 
 const ProductCarousel = () => {
-	const dispatch = useDispatch();
-
-	const productTopRated = useSelector(state => state.productTopRated);
-	const { loading, error, products } = productTopRated;
-
-	useEffect(() => {
-		dispatch(listTopProducts());
-	}, [dispatch]);
-
-	return loading ? (
-		<Loader />
-	) : error ? (
-		<Message variant='danger'>{error}</Message>
-	) : (
-		<Carousel pause='hover' className='bg-dark shadow-2-strong'>
-			{products.map(product => (
-				<Carousel.Item key={product._id}>
-					<Link to={`/product/${product._id}`}>
-						<Image src={product.image} alt={product.name} fluid />
-						<Carousel.Caption className='carousel-caption'>
-							<h2>{product.name}</h2>
-						</Carousel.Caption>
-					</Link>
-				</Carousel.Item>
-			))}
-		</Carousel>
+	return (
+		<div>
+			<Slide easing='ease'>
+				<div className='each-slide'>
+					<div style={{ backgroundImage: `url(${slideImages[0]})` }}></div>
+				</div>
+				<div className='each-slide'>
+					<div style={{ backgroundImage: `url(${slideImages[1]})` }}></div>
+				</div>
+				<div className='each-slide'>
+					<div style={{ backgroundImage: `url(${slideImages[2]})` }}></div>
+				</div>
+			</Slide>
+		</div>
 	);
 };
 

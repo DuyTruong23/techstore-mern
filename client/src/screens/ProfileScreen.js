@@ -125,8 +125,6 @@ const ProfileScreen = ({ location, history }) => {
 								<th>ID</th>
 								<th>NGÀY</th>
 								<th>TỔNG</th>
-								<th>ĐÃ THANH TOÁN</th>
-								<th>ĐỊA CHỈ</th>
 								<th></th>
 							</tr>
 						</thead>
@@ -135,20 +133,11 @@ const ProfileScreen = ({ location, history }) => {
 								<tr key={order._id}>
 									<td>{order._id}</td>
 									<td>{order.createdAt.substring(0, 10)}</td>
-									<td>{order.totalPrice}</td>
 									<td>
-										{order.isPaid ? (
-											order.paidAt.substring(0, 10)
-										) : (
-											<i className='fas fa-times' style={{ color: 'red' }}></i>
-										)}
-									</td>
-									<td>
-										{order.isDelivered ? (
-											order.deliveredAt.substring(0, 10)
-										) : (
-											<i className='fas fa-times' style={{ color: 'red' }}></i>
-										)}
+										{order.totalPrice
+											.toString()
+											.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+										vnđ
 									</td>
 									<td>
 										<LinkContainer to={`/order/${order._id}`}>

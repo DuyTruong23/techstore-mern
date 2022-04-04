@@ -39,8 +39,6 @@ const ProductScreen = ({ history, match }) => {
 		loading: loadingProductReview,
 		error: errorProductReview,
 	} = productReviewCreate;
-	var prices = product.price;
-
 	useEffect(() => {
 		if (successProductReview) {
 			setRating(0);
@@ -94,7 +92,8 @@ const ProductScreen = ({ history, match }) => {
 									/>
 								</ListGroup.Item>
 								<ListGroup.Item>
-									Giá: {product.price}
+									Giá:
+									{product.price}
 									vnđ
 								</ListGroup.Item>
 							</ListGroup>
