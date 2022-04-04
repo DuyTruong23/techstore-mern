@@ -92,7 +92,7 @@ const updateProduct = asyncHandler(async (req, res) => {
 
   if (product) {
     product.name = name
-    product.price = price
+    product.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') = price
     product.description = description
     product.image = image
     product.brand = brand
