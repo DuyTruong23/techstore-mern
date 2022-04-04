@@ -35,7 +35,7 @@ const getProductById = asyncHandler(async (req, res) => {
     res.json(product)
   } else {
     res.status(404)
-    throw new Error('Product not found')
+    throw new Error('Không tìm thấy sản phẩm')
   }
 })
 
@@ -47,10 +47,10 @@ const deleteProduct = asyncHandler(async (req, res) => {
 
   if (product) {
     await product.remove()
-    res.json({ message: 'Product removed' })
+    res.json({ message: 'Xoá sản phẩm' })
   } else {
     res.status(404)
-    throw new Error('Product not found')
+    throw new Error('Không tìm thấy sản phẩm')
   }
 })
 
@@ -59,15 +59,15 @@ const deleteProduct = asyncHandler(async (req, res) => {
 // @access  Private/Admin
 const createProduct = asyncHandler(async (req, res) => {
   const product = new Product({
-    name: 'Sample name',
+    name: 'Tên sản phẩm',
     price: 0,
     user: req.user._id,
-    image: '/images/sample.jpg',
-    brand: 'Sample brand',
-    category: 'Sample category',
+    image: 'ánh.png',
+    brand: 'Thương hiệu',
+    category: 'Danh mục sản phẩm',
     countInStock: 0,
     numReviews: 0,
-    description: 'Sample description',
+    description: 'Mô tả',
   })
 
   const createdProduct = await product.save()

@@ -61,7 +61,7 @@ const ProductListScreen = ({ history, match }) => {
 	]);
 
 	const deleteHandler = id => {
-		if (window.confirm('Are you sure')) {
+		if (window.confirm('Đã giao hàng thành công')) {
 			dispatch(deleteProduct(id));
 		}
 	};
