@@ -29,24 +29,6 @@ cd client
 npm install
 ```
 
-### Run
-
-```
-# Run client (:3000) & server (:5000)
-npm run dev
-
-# Run server only
-npm run server
-```
-
-## Build & Deploy
-
-```
-# Create client prod build
-cd client
-npm run build
-```
-
 ### Load Database
 
 ```
@@ -55,6 +37,32 @@ npm run data:import
 
 # Destroy data
 npm run data:destroy
+### Run
+
+```
+
+# Run client (:3000) & server (:5000)
+
+npm run dev
+
+# Run server only
+
+npm run server
+
+```
+
+## Build & Deploy
+
+```
+
+# Create client prod build
+
+cd client
+npm run build
+
+```
+
+
 ```
 
 ```
