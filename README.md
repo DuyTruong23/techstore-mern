@@ -1,19 +1,15 @@
-## Features
+## Chuc nang
 
-- Full featured shopping cart
-- Product reviews and ratings
-- Product pagination
-- Product search feature
-- User profile with orders
-- Admin product management
-- Admin user management
-- Admin Order details page
-- Checkout process (shipping, payment method, etc)
-- Database seeder (products & users)
+- Full chac nang san pham
+- Danh gia san pham
+- Thong tin khach hang
+- Quan ly admin
+- Thanh toan
+- Database
 
-### Env Variables
+### Them file .evn
 
-Create a .env file in then root and add the following
+root/.evn , xoa .example
 
 ```
 NODE_ENV = development
@@ -22,10 +18,13 @@ MONGO_URI = your mongodb uri
 JWT_SECRET = 'abc123'
 ```
 
-### Install Dependencies (client & server)
+### Khoi chay
 
 ```
+/root/
 npm install
+
+
 cd client
 npm install
 ```
@@ -48,7 +47,7 @@ cd client
 npm run build
 ```
 
-### Seed Database
+### Load Database
 
 ```
 # Import data
@@ -59,7 +58,7 @@ npm run data:destroy
 ```
 
 ```
-Sample User Logins
+User mau
 
 admin@gmail.com (Admin)
 123456
