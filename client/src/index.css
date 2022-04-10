@@ -1,5 +1,8 @@
-main {
-  min-height: 80vh;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 h3 {
@@ -20,12 +23,24 @@ h2 {
   margin: 0.1rem;
 }
 
+.py-3 {
+  margin-top: 77px;
+}
+
 /* carousel */
+
+.carousel {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
 .carousel-item-next,
 .carousel-item-prev,
 .carousel-item.active {
   display: flex;
 }
+
 .carousel-caption {
   position: absolute;
   top: 0;
@@ -39,15 +54,36 @@ h2 {
   height: 300px;
   padding: 30px;
   margin: 40px;
-  border-radius: 50%;
+  border-radius: 10%;
   margin-left: auto;
   margin-right: auto;
 }
+
 .carousel a {
   margin: 0 auto;
 }
+
 @media (max-width: 900px) {
   .carousel-caption h2 {
     font-size: 2.5vw;
   }
+  .carousel {
+    width: auto;
+    height: auto;
+  }
+}
+
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 550px;
+}
+
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background: #fff;
+  text-align: center;
 }
