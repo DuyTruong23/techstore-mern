@@ -20,9 +20,7 @@ const PlaceOrderScreen = ({ history }) => {
   }
   //   Calculate prices
   const addDecimals = (num) => {
-    return (Math.round(num * 100) / 100)
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return Math.round(num * 100) / 100;
   };
 
   cart.itemsPrice = addDecimals(
@@ -148,9 +146,7 @@ const PlaceOrderScreen = ({ history }) => {
                 <Row>
                   <Col>Tổng</Col>
                   <Col>
-                    {cart.totalPrice
-                      .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                    {cart.totalPrice}
                     vnđ
                   </Col>
                 </Row>
