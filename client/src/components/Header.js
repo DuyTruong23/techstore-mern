@@ -33,7 +33,7 @@ const Header = () => {
             <Nav className="ml-auto">
               <LinkContainer to="/cart">
                 <Nav.Link>
-                  <i className="fas fa-shopping-cart"></i> Giỏi hàng
+                  <i className="fas fa-shopping-cart"></i> Giỏ hàng
                 </Nav.Link>
               </LinkContainer>
               {userInfo ? (

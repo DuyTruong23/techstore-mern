@@ -33,7 +33,7 @@ const HomeScreen = ({ match }) => {
           Trờ lại
         </Link>
       )}
-      <h1 className="text-center">Sản phẩm nổi bậc</h1>
+      <h1 className="text-center">Sản phẩm nổi bật</h1>
       {loading ? (
         <Loader />
       ) : error ? (

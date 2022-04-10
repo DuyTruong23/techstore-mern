@@ -10,7 +10,6 @@ import {
   Button,
   Form,
 } from 'react-bootstrap';
-import Rating from '../components/Rating';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
 import Meta from '../components/Meta';
@@ -22,7 +21,6 @@ import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants';
 
 const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(1);
-  const [rating, setRating] = useState(0);
   const [comment, setComment] = useState('');
 
   const dispatch = useDispatch();
@@ -41,7 +39,6 @@ const ProductScreen = ({ history, match }) => {
   } = productReviewCreate;
   useEffect(() => {
     if (successProductReview) {
-      setRating(0);
       setComment('');
     }
     if (!product._id || product._id !== match.params.id) {
@@ -58,7 +55,6 @@ const ProductScreen = ({ history, match }) => {
     e.preventDefault();
     dispatch(
       createProductReview(match.params.id, {
-        rating,
         comment,
       })
     );
@@ -84,12 +80,6 @@ const ProductScreen = ({ history, match }) => {
               <ListGroup variant="flush">
                 <ListGroup.Item>
                   <h3>{product.name}</h3>
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  <Rating
-                    value={product.rating}
-                    text={`${product.numReviews} đánh giá`}
-                  />
                 </ListGroup.Item>
                 <ListGroup.Item>
                   Giá:
