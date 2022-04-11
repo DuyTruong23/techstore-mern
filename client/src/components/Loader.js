@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React from "react";
 import { Spinner } from "react-bootstrap";
+=======
+import React from 'react';
+import { Spinner } from 'react-bootstrap';
+>>>>>>> feature/Duy2
 
 const Loader = () => {
   return (

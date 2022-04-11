@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import React from "react";
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 import Rating from "./Rating";
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Card } from 'react-bootstrap';
+>>>>>>> feature/Duy2
 
 const Product = ({ product }) => {
   return (
@@ -15,6 +21,7 @@ const Product = ({ product }) => {
             <strong>{product.name}</strong>
           </Card.Title>
         </Link>
+<<<<<<< HEAD
         <Card.Text as="div">
           <Rating
             value={product.rating}
@@ -25,6 +32,12 @@ const Product = ({ product }) => {
           {product.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
           vnđ
         </Card.Text>
+=======
+        <Card.Text as="p">
+          {product.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+          vnđ
+        </Card.Text>
+>>>>>>> feature/Duy2
       </Card.Body>
     </Card>
   );

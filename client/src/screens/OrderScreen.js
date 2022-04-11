@@ -106,9 +106,13 @@ const OrderScreen = ({ match, history }) => {
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Payment Method</h2>
+              <h2>Phương thức thanh toán</h2>
               <p>
+<<<<<<< HEAD
                 <strong>Method: </strong>
+=======
+                <strong>Phương thức: </strong>
+>>>>>>> feature/Duy2
                 Giao hàng tận nơi (cod)
               </p>
             </ListGroup.Item>
@@ -140,11 +144,15 @@ const OrderScreen = ({ match, history }) => {
                           {item.price
                             .toString()
                             .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+<<<<<<< HEAD
                           vnđ =
                           {item.qty *
                             item.price
                               .toString()
                               .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+=======
+                          vnđ ={item.qty * item.price}
+>>>>>>> feature/Duy2
                           vnđ
                         </Col>
                       </Row>
