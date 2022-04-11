@@ -6,9 +6,8 @@ Create a .env file in root
 
 NODE_ENV = development
 PORT = 5000
-MONGO_URI = your mongodb uri
+MONGO_URI = mongodb://localhost:27017
 JWT_SECRET = 'abc123'
-PAYPAL_CLIENT_ID = your paypal client id
 
 ### Install Node Package (client & server)
 
@@ -30,13 +29,10 @@ npm run dev
 
 npm run server
 
-Account example
+# Account example
 
 admin@example.com (Admin)
 123456
 
-duycute@example.com (Customer)
-123456
-
-duydeptrai@example.com (Customer)
+minhung@gmail.com/giaphuc@gmail.com (Customer)
 123456
