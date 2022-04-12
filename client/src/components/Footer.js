@@ -1,25 +1,13 @@
-<<<<<<< HEAD
-import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
-import { Container } from "react-bootstrap";
-import { Nav } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
-=======
 import React from 'react';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from 'mdbreact';
 import { Container } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
->>>>>>> feature/Duy2
 
 const Footer = () => {
   return (
     <Container>
-<<<<<<< HEAD
-      {" "}
-=======
       {' '}
->>>>>>> feature/Duy2
       <MDBFooter color="blue" className="font-small pt-4 mt-4">
         <MDBContainer fluid className="text-center text-md-left">
           <MDBRow>

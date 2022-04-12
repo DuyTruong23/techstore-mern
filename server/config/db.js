@@ -10,11 +10,7 @@ const connectDB = async () => {
 
     console.log(`MongoDB Connected: ${conn.connection.host}`.cyan.underline);
   } catch (error) {
-<<<<<<< HEAD
-    console.error(`Error:${error.message}`.red);
-=======
     console.error(`Error: ${error.message}`.red.underline.bold);
->>>>>>> feature/Duy2
     process.exit(1);
   }
 };

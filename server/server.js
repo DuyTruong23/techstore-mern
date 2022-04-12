@@ -25,15 +25,6 @@ app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/orders', orderRoutes);
 
-<<<<<<< HEAD
-const __dirname = path.resolve();
-app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
-=======
-app.get('/api/config/paypal', (req, res) =>
-  res.send(process.env.PAYPAL_CLIENT_ID)
-);
->>>>>>> feature/Duy2
-
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '/client/build')));
 
@@ -54,10 +45,6 @@ const PORT = process.env.PORT || 5000;
 app.listen(
   PORT,
   console.log(
-<<<<<<< HEAD
-    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
-=======
     `Server running in ${process.env.NODE_ENV} on port ${PORT}`.yellow.bold
->>>>>>> feature/Duy2
   )
 );
