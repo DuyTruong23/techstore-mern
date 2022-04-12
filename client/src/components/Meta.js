@@ -12,7 +12,7 @@ const Meta = ({ title, description, keywords }) => {
 };
 
 Meta.defaultProps = {
-  title: 'Welcome To Tech Store',
+  title: 'Tech Store',
 };
 
 export default Meta;
