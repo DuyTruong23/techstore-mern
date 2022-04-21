@@ -1,3 +1,4 @@
+### Mern-stack Course Project
 ### Env Variables
 
 Create a .env file in root
